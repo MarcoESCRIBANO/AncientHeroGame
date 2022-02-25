@@ -7,11 +7,11 @@ public class SkeletonController : MonoBehaviour
     // Start is called before the first frame update
     private float distanceFromPerso;
     [SerializeField] GameObject notrePerso;
-    private Vector3 skeletonPos;
+     //[SerializeField] GameObject skeletonObject;
     private Animator animator;
     private int health;
-    private float rangeAttack = 5f;
-    private float rangeTargetPlayer = 20f;
+    private float rangeAttack = 15f;
+    private float rangeTargetPlayer = 50f;
 
     void Start()
     {
@@ -27,7 +27,9 @@ public class SkeletonController : MonoBehaviour
     private float calculeDistance()
     {
         Vector3 persoPos = notrePerso.transform.position;
-        float dist = (persoPos- skeletonPos).sqrMagnitude;
+        float dist = (persoPos- transform.position).sqrMagnitude;
+        dist = Mathf.Sqrt(dist);
+        Debug.Log("calculeDistance" + dist + "alaed ");
         return dist;
     }
     IEnumerator setAnimator()
