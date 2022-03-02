@@ -64,6 +64,10 @@ public class SkeletonController : MonoBehaviour
     }
     private void instantiateParticule()
     {
-        Instantiate(degatsParticules, weaponObject.transform);
+        Debug.Log("a");
+        GameObject effect = Instantiate(degatsParticules, weaponObject.transform);
+        ParticleSystem.MainModule particle = effect.GetComponent<ParticleSystem>().main;
+        Debug.Log("a");
+        Destroy(effect, particle.duration);
     }
 }
