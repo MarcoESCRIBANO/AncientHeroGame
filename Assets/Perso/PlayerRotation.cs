@@ -25,7 +25,9 @@ public class PlayerRotation : MonoBehaviour
     {
         h = Input.GetAxis("Horizontal");
         v = Input.GetAxis("Vertical");
+        Debug.Log("avant");
         yaun = parent.transform.eulerAngles.y;
+        Debug.Log("apres");
         float varYaun = 0;
         float varYaunX = 0;
         float varYaunY = 0;
@@ -55,12 +57,12 @@ public class PlayerRotation : MonoBehaviour
             varYaunX = 180;
         }
 
-        Debug.Log(h + " - " + v);
+        //Debug.Log(h + " - " + v);
         if (h!=0 || v != 0)
         {
             varYaun = (varYaunY * Mathf.Abs(h) + varYaunX* Mathf.Abs(v)) / (Mathf.Abs(h) + Mathf.Abs(v));
         }
-        Debug.Log(varYaunX+"-"+varYaunY+" // "+varYaun+" // "+yaun);
+        //Debug.Log(varYaunX+"-"+varYaunY+" // "+varYaun+" // "+yaun);
         transform.eulerAngles = new Vector3(0f, (yaun + varYaun)%360, 0f);
     }
 }
