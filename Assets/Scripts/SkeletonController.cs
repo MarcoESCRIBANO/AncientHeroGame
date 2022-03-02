@@ -48,7 +48,12 @@ public class SkeletonController : MonoBehaviour
     {
         while (true)
         {
-            animator.SetBool("isDead", this.health <= 0);
+            if(this.health <= 0)
+            {
+                Debug.Log("isDead");
+                animator.SetBool("isDead",true );
+            }
+            
             animator.SetBool("canAttack", calculeDistance() < rangeAttack);
             if (calculeDistance() < rangeTargetPlayer)
             {
@@ -75,5 +80,9 @@ public class SkeletonController : MonoBehaviour
         GameObject effect = Instantiate(degatsParticules, weaponObject.transform);
         ParticleSystem.MainModule particle = effect.GetComponent<ParticleSystem>().main;
         Destroy(effect, particle.duration);
+    }
+    private void destroySkeletton()
+    {
+        Destroy(this.gameObject);
     }
 }

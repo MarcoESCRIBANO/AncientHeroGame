@@ -1713,7 +1713,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e6325fae21567a4cae38b57ca03a311, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObject: {fileID: 2067464981}
+  healthBar: {fileID: 2067464981}
+  skelettonObject: {fileID: 1693857966}
 --- !u!1 &676467716
 GameObject:
   m_ObjectHideFlags: 0
@@ -2497,7 +2498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc3a2b2ec698a104597b7b08c7ca7561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObject: {fileID: 946197702}
+  healtBar: {fileID: 946197702}
 --- !u!64 &1127409707
 MeshCollider:
   m_ObjectHideFlags: 0
