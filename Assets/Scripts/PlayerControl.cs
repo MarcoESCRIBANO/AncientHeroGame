@@ -56,9 +56,9 @@ public class PlayerControl : MonoBehaviour
         Animation();
 
         rotation();
-
+        Debug.Log("allo2");
         isDead();
-        //hasWon();
+        hasWon();
     }
 
     private void Move()
@@ -140,12 +140,19 @@ public class PlayerControl : MonoBehaviour
         }
         
     }
-    /*hasWon()
+    private void hasWon()
     {
-        if(gameObject.hasChild() == false)
+        Debug.Log("allo2");
+        if (GameObject.FindGameObjectsWithTag("Ennemy").Length == 0)
         {
-          
+            Debug.Log("fin");
+            SceneManager.LoadScene("WinningScene");
         }
-    }*/
+        else
+        {
+            Debug.Log("allo");
+            Debug.Log(GameObject.FindGameObjectsWithTag("Ennemy").Length);
+        }
+    }
 
 }

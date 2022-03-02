@@ -1735,6 +1735,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton@Skin Variant (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5228988702596865610, guid: 63b870f7235cc8f49932203399216490, type: 3}
+      propertyPath: m_TagString
+      value: Ennemy
+      objectReference: {fileID: 0}
     - target: {fileID: 5228988702597218922, guid: 63b870f7235cc8f49932203399216490, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -2555,6 +2559,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton@Skin Variant (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5228988702596865610, guid: 63b870f7235cc8f49932203399216490, type: 3}
+      propertyPath: m_TagString
+      value: Ennemy
+      objectReference: {fileID: 0}
     - target: {fileID: 5228988702597218922, guid: 63b870f7235cc8f49932203399216490, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3005,6 +3013,10 @@ PrefabInstance:
     - target: {fileID: 5228988702596865610, guid: 63b870f7235cc8f49932203399216490, type: 3}
       propertyPath: m_Name
       value: Skeleton@Skin Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228988702596865610, guid: 63b870f7235cc8f49932203399216490, type: 3}
+      propertyPath: m_TagString
+      value: Ennemy
       objectReference: {fileID: 0}
     - target: {fileID: 5228988702597218922, guid: 63b870f7235cc8f49932203399216490, type: 3}
       propertyPath: m_RootOrder
@@ -5104,6 +5116,10 @@ PrefabInstance:
     - target: {fileID: 5228988702596865610, guid: 63b870f7235cc8f49932203399216490, type: 3}
       propertyPath: m_Name
       value: Skeleton@Skin Variant (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228988702596865610, guid: 63b870f7235cc8f49932203399216490, type: 3}
+      propertyPath: m_TagString
+      value: Ennemy
       objectReference: {fileID: 0}
     - target: {fileID: 5228988702597218922, guid: 63b870f7235cc8f49932203399216490, type: 3}
       propertyPath: m_RootOrder
@@ -7661,6 +7677,10 @@ PrefabInstance:
     - target: {fileID: 5228988702596865610, guid: 63b870f7235cc8f49932203399216490, type: 3}
       propertyPath: m_Name
       value: Skeleton@Skin Variant (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228988702596865610, guid: 63b870f7235cc8f49932203399216490, type: 3}
+      propertyPath: m_TagString
+      value: Ennemy
       objectReference: {fileID: 0}
     - target: {fileID: 5228988702597218922, guid: 63b870f7235cc8f49932203399216490, type: 3}
       propertyPath: m_RootOrder
@@ -13710,6 +13730,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton@Skin Variant (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5228988702596865610, guid: 63b870f7235cc8f49932203399216490, type: 3}
+      propertyPath: m_TagString
+      value: Ennemy
+      objectReference: {fileID: 0}
     - target: {fileID: 5228988702597218922, guid: 63b870f7235cc8f49932203399216490, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -16571,6 +16595,10 @@ PrefabInstance:
     - target: {fileID: 5228988702596865610, guid: 63b870f7235cc8f49932203399216490, type: 3}
       propertyPath: m_Name
       value: Skeleton@Skin Variant (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228988702596865610, guid: 63b870f7235cc8f49932203399216490, type: 3}
+      propertyPath: m_TagString
+      value: Ennemy
       objectReference: {fileID: 0}
     - target: {fileID: 5228988702597218922, guid: 63b870f7235cc8f49932203399216490, type: 3}
       propertyPath: m_RootOrder
@@ -20968,6 +20996,10 @@ PrefabInstance:
     - target: {fileID: 5228988702596865610, guid: 63b870f7235cc8f49932203399216490, type: 3}
       propertyPath: m_Name
       value: Skeleton@Skin Variant (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228988702596865610, guid: 63b870f7235cc8f49932203399216490, type: 3}
+      propertyPath: m_TagString
+      value: Ennemy
       objectReference: {fileID: 0}
     - target: {fileID: 5228988702597218922, guid: 63b870f7235cc8f49932203399216490, type: 3}
       propertyPath: m_RootOrder
@@ -28676,6 +28708,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton@Skin Variant (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5228988702596865610, guid: 63b870f7235cc8f49932203399216490, type: 3}
+      propertyPath: m_TagString
+      value: Ennemy
+      objectReference: {fileID: 0}
     - target: {fileID: 5228988702597218922, guid: 63b870f7235cc8f49932203399216490, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -30084,6 +30120,10 @@ PrefabInstance:
     - target: {fileID: 5228988702596865610, guid: 63b870f7235cc8f49932203399216490, type: 3}
       propertyPath: m_Name
       value: Skeleton@Skin Variant (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228988702596865610, guid: 63b870f7235cc8f49932203399216490, type: 3}
+      propertyPath: m_TagString
+      value: Ennemy
       objectReference: {fileID: 0}
     - target: {fileID: 5228988702597218922, guid: 63b870f7235cc8f49932203399216490, type: 3}
       propertyPath: m_RootOrder
@@ -34787,6 +34827,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton@Skin Variant (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5228988702596865610, guid: 63b870f7235cc8f49932203399216490, type: 3}
+      propertyPath: m_TagString
+      value: Ennemy
+      objectReference: {fileID: 0}
     - target: {fileID: 5228988702597218922, guid: 63b870f7235cc8f49932203399216490, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -35682,6 +35726,10 @@ PrefabInstance:
     - target: {fileID: 5228988702596865610, guid: 63b870f7235cc8f49932203399216490, type: 3}
       propertyPath: m_Name
       value: Skeleton@Skin
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228988702596865610, guid: 63b870f7235cc8f49932203399216490, type: 3}
+      propertyPath: m_TagString
+      value: Ennemy
       objectReference: {fileID: 0}
     - target: {fileID: 5228988702597218922, guid: 63b870f7235cc8f49932203399216490, type: 3}
       propertyPath: m_RootOrder
