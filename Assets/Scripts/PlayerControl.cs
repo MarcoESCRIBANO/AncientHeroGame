@@ -19,6 +19,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private GameObject coupEffect;
     [SerializeField] private GameObject shieldEffect;
     [SerializeField] private GameObject weaponObject;
+    [SerializeField] private GameObject HealthObject;
     private GameObject shiedObject;
     bool hasShield = false;
     public static PlayerControl Instance { get; private set; }
@@ -55,6 +56,8 @@ public class PlayerControl : MonoBehaviour
         Animation();
 
         rotation();
+
+        isDead();
     }
 
     private void Move()
@@ -98,6 +101,13 @@ public class PlayerControl : MonoBehaviour
         yaun += Input.GetAxis("Mouse X");
 
         transform.eulerAngles = new Vector3(0f, yaun, 0f);
+    }
+    private void isDead()
+    {
+        if (HealthObject.GetComponent<HealtBarHandler>().getHealth() < 0)
+        {
+            SceneManager.LoadScene("UIScene");
+        }
     }
     public void setParticuleAttack()
     {
