@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/UIScene.unity
+    guid: 510750de5ceb72d489111f8784ab9aa2
+  - enabled: 1
+    path: Assets/Scenes/OptionsScene.unity
+    guid: 36debd7f7045d51479132f5db16e9aba
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/AncienMap.unity
+    guid: 4be638e9cb93b4d619710f244b0488b1
+  - enabled: 1
+    path: Assets/Scenes/WinningScene.unity
+    guid: cd8a7f7b0c8d1ba4cbd447ef2a208206
   m_configObjects: {}
