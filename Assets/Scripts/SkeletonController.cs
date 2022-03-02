@@ -7,12 +7,15 @@ public class SkeletonController : MonoBehaviour
     // Start is called before the first frame update
     private float distanceFromPerso;
     [SerializeField] GameObject notrePerso;
-     //[SerializeField] GameObject skeletonObject;
+    [SerializeField]  GameObject degatsParticules;
+    [SerializeField] GameObject weaponObject;
+    //[SerializeField] GameObject skeletonObject;
     private Animator animator;
     private int health;
     private float rangeAttack = 15f;
     private float rangeTargetPlayer = 50f;
     private float speed = 0.1f;
+    
 
     void Start()
     {
@@ -58,5 +61,9 @@ public class SkeletonController : MonoBehaviour
         Vector3 direction = notrePerso.transform.position - transform.position;
         direction.Normalize();
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 0.1f * Time.deltaTime);
+    }
+    private void instantiateParticule()
+    {
+        Instantiate(degatsParticules, weaponObject.transform);
     }
 }
