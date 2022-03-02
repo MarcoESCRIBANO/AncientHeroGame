@@ -5,11 +5,12 @@ using UnityEngine.UI;
 public class HealtBarHandler : MonoBehaviour
 {
     private float currentHealth;
+
     [SerializeField]private Image healthBarre;
     [SerializeField] private int regenPerSecond;
     void Start()
     {
-        currentHealth = 50f;
+        currentHealth = 100f;
         healthBarre.fillAmount = currentHealth/100;
         StartCoroutine(HealtDuringTime());
     }

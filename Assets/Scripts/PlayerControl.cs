@@ -80,7 +80,7 @@ public class PlayerControl : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            SceneManager.LoadScene("UIScene", LoadSceneMode.Additive);
+            SceneManager.LoadScene("UIScene");
         }
 
         h = Input.GetAxis("Horizontal");

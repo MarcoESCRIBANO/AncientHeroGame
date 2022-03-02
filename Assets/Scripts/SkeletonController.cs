@@ -28,7 +28,7 @@ public class SkeletonController : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        this.health = 50;
+        this.health = 100;
     }
 
     // Update is called once per frame
@@ -63,6 +63,7 @@ public class SkeletonController : MonoBehaviour
                     move();
                 }
                 animator.SetBool("playerDetected",true);
+                turnDirection();
             }
             yield return new WaitForSeconds(.8f);
         }
@@ -71,6 +72,12 @@ public class SkeletonController : MonoBehaviour
     private void move()
     {
         transform.position = Vector3.MoveTowards(transform.position, notrePerso.transform.position, speed * Time.deltaTime);
+        turnDirection();
+
+
+    }
+    private void turnDirection()
+    {
         Vector3 direction = notrePerso.transform.position - transform.position;
         direction.Normalize();
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 0.1f * Time.deltaTime);
