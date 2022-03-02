@@ -17,9 +17,9 @@ public class SkeletonController : MonoBehaviour
     //[SerializeField] GameObject skeletonObject;
     private Animator animator;
     private int health;
-    private float rangeAttack = 15f;
+    private float rangeAttack = 5f;
     private float rangeTargetPlayer = 50f;
-    private float speed = 0.1f;
+    private float speed = 0.3f;
     public void removeHealth(int v)
     {
         this.health -= v;
