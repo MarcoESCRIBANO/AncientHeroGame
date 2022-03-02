@@ -8,17 +8,20 @@ public class HealtBarHandler : MonoBehaviour
 
     [SerializeField]private Image healthBarre;
     [SerializeField] private int regenPerSecond;
+
     void Start()
     {
         currentHealth = 100f;
         healthBarre.fillAmount = currentHealth/100;
         StartCoroutine(HealtDuringTime());
     }
+
     public void removeHealth(int number)
     {
         currentHealth -= number;
         healthBarre.fillAmount = currentHealth / 100;
     }
+
     public float getHealth()
     {
         return currentHealth;

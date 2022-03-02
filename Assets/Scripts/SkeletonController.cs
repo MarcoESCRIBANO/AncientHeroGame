@@ -7,7 +7,6 @@ public class SkeletonController : MonoBehaviour
 {
 
     // Start is called before the first frame update
-    private float distanceFromPerso;
     [SerializeField] GameObject notrePerso;
     [SerializeField]  GameObject degatsParticules;
     [SerializeField] GameObject weaponObject;
@@ -41,7 +40,6 @@ public class SkeletonController : MonoBehaviour
         Vector3 persoPos = notrePerso.transform.position;
         float dist = (persoPos- transform.position).sqrMagnitude;
         dist = Mathf.Sqrt(dist);
-        //Debug.Log("calculeDistance" + dist + "alaed ");
         return dist;
     }
     IEnumerator setAnimator()
@@ -50,7 +48,6 @@ public class SkeletonController : MonoBehaviour
         {
             if(this.health <= 0)
             {
-                Debug.Log("isDead");
                 animator.SetBool("isDead",true );
             }
             

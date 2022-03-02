@@ -17,7 +17,6 @@ public class CameraMovement : MonoBehaviour
         rotation();
     }
 
-
     private void rotation()
     {
         pitch += Input.GetAxis("Mouse Y");
