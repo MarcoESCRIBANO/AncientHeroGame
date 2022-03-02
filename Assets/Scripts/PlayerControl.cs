@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -76,6 +77,10 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L))
         {
             animator.SetTrigger("Passive");
+        }
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            SceneManager.LoadScene("UIScene", LoadSceneMode.Additive);
         }
 
         h = Input.GetAxis("Horizontal");
