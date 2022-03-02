@@ -19,7 +19,7 @@ public class SkeletonController : MonoBehaviour
     private int health;
     private float rangeAttack = 5f;
     private float rangeTargetPlayer = 50f;
-    private float speed = 0.3f;
+    private float speed = 0.1f;
     public void removeHealth(int v)
     {
         this.health -= v;

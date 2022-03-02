@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerControl : MonoBehaviour
 {
-    public float speed = 20; 
+    public float speed = 15; 
 
     private float yaun = 180f;
 
@@ -58,6 +58,7 @@ public class PlayerControl : MonoBehaviour
         rotation();
 
         isDead();
+        //hasWon();
     }
 
     private void Move()
@@ -139,5 +140,12 @@ public class PlayerControl : MonoBehaviour
         }
         
     }
+    /*hasWon()
+    {
+        if(gameObject.hasChild() == false)
+        {
+          
+        }
+    }*/
 
 }

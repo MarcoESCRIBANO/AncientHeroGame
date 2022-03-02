@@ -12155,6 +12155,10 @@ PrefabInstance:
       value: 0.00898538
       objectReference: {fileID: 0}
     - target: {fileID: 3267680949064597606, guid: 7f9f84e36eed74afbaa7e6fbbe601859, type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3267680949064597606, guid: 7f9f84e36eed74afbaa7e6fbbe601859, type: 3}
       propertyPath: coupEffect
       value: 
       objectReference: {fileID: 7172381925165785740, guid: 237e36502ec4a364b80ab575e451cf44, type: 3}
