@@ -5,6 +5,7 @@ using UnityEngine;
 public class isTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField] private GameObject playerObject;
     void Start()
     {
         
@@ -13,6 +14,6 @@ public class isTrigger : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("etst");
+        playerObject.GetComponent<HealtBarHandler>().removeHealth(10);
     }
 }

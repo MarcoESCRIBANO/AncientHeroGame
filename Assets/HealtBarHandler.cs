@@ -29,7 +29,7 @@ public class HealtBarHandler : MonoBehaviour
         {
             if (currentHealth < 100)
             {
-                Debug.Log(currentHealth / 100f);
+             
                 currentHealth += regenPerSecond;
                 healthBarre.fillAmount = currentHealth / 100f;
             }

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ReceiveDamage : MonoBehaviour
 {
-    [SerializeField] private GameObject object2;
+    [SerializeField] private GameObject playerObject;
     private int health;
     void Start()
     {
@@ -15,14 +15,11 @@ public class ReceiveDamage : MonoBehaviour
     }
 
     // Update is called once per frame
-    void GetDamage(int num)
-    {
-        this.health -= num;
-    }
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("getDamage");
-        this.GetDamage(5);
-        
+        Debug.Log("receive");
+        playerObject.GetComponent<HealtBarHandler>().removeHealth(10);
+
+
     }
 }

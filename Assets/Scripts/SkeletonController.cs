@@ -1,21 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SkeletonController : MonoBehaviour
 {
+
     // Start is called before the first frame update
     private float distanceFromPerso;
     [SerializeField] GameObject notrePerso;
     [SerializeField]  GameObject degatsParticules;
     [SerializeField] GameObject weaponObject;
+
+    
+
     //[SerializeField] GameObject skeletonObject;
     private Animator animator;
     private int health;
     private float rangeAttack = 15f;
     private float rangeTargetPlayer = 50f;
     private float speed = 0.1f;
-    
+    public void removeHealth(int v)
+    {
+        this.health -= v;
+    }
 
     void Start()
     {
@@ -64,10 +72,8 @@ public class SkeletonController : MonoBehaviour
     }
     private void instantiateParticule()
     {
-        Debug.Log("a");
         GameObject effect = Instantiate(degatsParticules, weaponObject.transform);
         ParticleSystem.MainModule particle = effect.GetComponent<ParticleSystem>().main;
-        Debug.Log("a");
         Destroy(effect, particle.duration);
     }
 }
