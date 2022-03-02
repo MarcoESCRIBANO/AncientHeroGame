@@ -7,7 +7,7 @@ public class PlayerControl : MonoBehaviour
 {
     public float speed = 20; 
 
-    private float yaun = 0f;
+    private float yaun = 180f;
 
     public Rigidbody​ rigidbodyPerso;
 
