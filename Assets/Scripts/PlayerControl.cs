@@ -14,6 +14,12 @@ public class PlayerControl : MonoBehaviour
 
     public List<string> animations;
 
+    [SerializeField] private GameObject tourbiLolleEffect;
+    [SerializeField] private GameObject coupEffect;
+    [SerializeField] private GameObject shieldEffect;
+    [SerializeField] private GameObject weaponObject;
+    private GameObject shiedObject;
+    bool hasShield = false;
     public static PlayerControl Instance { get; private set; }
 
     float h;
@@ -87,6 +93,36 @@ public class PlayerControl : MonoBehaviour
         yaun += Input.GetAxis("Mouse X");
 
         transform.eulerAngles = new Vector3(0f, yaun, 0f);
+    }
+    public void setParticuleAttack()
+    {
+        GameObject effect = Instantiate(coupEffect, weaponObject.transform);
+        ParticleSystem.MainModule particle = effect.GetComponent<ParticleSystem>().main;
+        Destroy(effect, particle.duration);
+    }
+    public void setParticuleActive()
+    {
+        if (hasShield == false)
+        {
+            shiedObject = Instantiate(shieldEffect, this.transform);
+            hasShield = true;
+        }
+    }
+    public void setParticulePassive()
+    {
+        GameObject effect = Instantiate(tourbiLolleEffect, weaponObject.transform);
+        ParticleSystem.MainModule particle = effect.GetComponent<ParticleSystem>().main;
+        Destroy(effect, particle.duration);
+    }
+    public void setShieldOff()
+    {
+
+        if(hasShield == true)
+        {
+            Destroy(shiedObject);
+            hasShield = false;
+        }
+        
     }
 
 }
