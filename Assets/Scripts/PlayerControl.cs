@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class PlayerControl : MonoBehaviour
     bool hasShield = false;
     public static PlayerControl Instance { get; private set; }
 
+    private PlayerInput playerInput;
     float h;
     float v;
 
@@ -47,47 +49,44 @@ public class PlayerControl : MonoBehaviour
             "Active",
             "Passive"
         };
+
+        playerInput = GetComponent<PlayerInput>();
     }
 
     void Update()
     {
-        Move();
+        //Move();
 
         Animation();
 
-        rotation();
+        //rotation();
         isDead();
         hasWon();
     }
 
-    private void Move()
-    {
-        Vector3 deltaPosition = (transform.right * Input.GetAxis("Horizontal") + transform.forward * Input.GetAxis("Vertical")) * Time.deltaTime * speed;
-        deltaPosition.y = 0f;
-        rigidbodyPerso.velocity = deltaPosition * 100 + new Vector3(0, rigidbodyPerso.velocity.y, 0);
-    }
+
 
     private void Animation()
     {
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            animator.SetTrigger("Attack");
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            animator.SetTrigger("Active");
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            animator.SetTrigger("Passive");
-        }
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            SceneManager.LoadScene("UIScene");
-        }
+        //if (playerInput.actions["AttackDeBase"].)
+        //{
+        //    animator.SetTrigger("Attack");
+        //}
+        //if (Input.GetKeyDown(KeyCode.K))
+        //{
+        //    animator.SetTrigger("Active");
+        //}
+        //if (Input.GetKeyDown(KeyCode.L))
+        //{
+        //    animator.SetTrigger("Passive");
+        //}
+        //if (Input.GetKeyDown(KeyCode.Tab))
+        //{
+        //    SceneManager.LoadScene("UIScene");
+        //}
 
-        h = Input.GetAxis("Horizontal");
-        v = Input.GetAxis("Vertical");
+        h = playerInput.actions["Move"].ReadValue<Vector2>().x;
+        v = playerInput.actions["Move"].ReadValue<Vector2>().y;
 
         if (Mathf.Abs(h) > 0.001f)
             v = 0;
@@ -96,9 +95,38 @@ public class PlayerControl : MonoBehaviour
         animator.SetFloat("speedv", speed);
     }
 
+    public void OnMove()
+    {
+        Debug.Log("Test");
+        Vector3 deltaPosition = (transform.right * playerInput.actions["Move"].ReadValue<Vector2>().x + transform.forward * playerInput.actions["Move"].ReadValue<Vector2>().y) * Time.deltaTime * speed;
+        deltaPosition.y = 0f;
+        rigidbodyPerso.velocity = deltaPosition * 100 + new Vector3(0, rigidbodyPerso.velocity.y, 0);
+    }
+
+    public void OnAttackDeBase()
+    {
+        animator.SetTrigger("Attack");
+    }
+
+    public void OnShield()
+    {
+        animator.SetTrigger("Active");
+    }
+
+    public void OnAttackUltime()
+    {
+        animator.SetTrigger("Passive");
+    }
+
+    public void OnMenu()
+    {
+        SceneManager.LoadScene("UIScene");
+    }
+
+
     private void rotation()
     {
-        yaun += Input.GetAxis("Mouse X");
+        //yaun += playerInput.actions["CameraMove"].ReadValue<Vector2>().x;
 
         transform.eulerAngles = new Vector3(0f, yaun, 0f);
     }
@@ -121,6 +149,7 @@ public class PlayerControl : MonoBehaviour
         {
             shiedObject = Instantiate(shieldEffect, this.transform);
             hasShield = true;
+            StartCoroutine(nameof(TimeShield));
         }
     }
     public void setParticulePassive()
@@ -145,6 +174,12 @@ public class PlayerControl : MonoBehaviour
         {
             SceneManager.LoadScene("WinningScene");
         }
+    }
+
+    IEnumerator TimeShield()
+    {
+        yield return new WaitForSeconds(10f);
+        setShieldOff();
     }
 
 }

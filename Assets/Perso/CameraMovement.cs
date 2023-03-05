@@ -8,19 +8,19 @@ public class CameraMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
-        rotation();
+        //rotation();
     }
 
     private void rotation()
     {
-        pitch += Input.GetAxis("Mouse Y");
-        if (pitch < 75 && pitch > -75)
+        //pitch += Input.GetAxis("Mouse Y");
+        if (pitch < 50 && pitch > -60)
         {
             transform.eulerAngles = new Vector3(-pitch, transform.eulerAngles.y, 0f);
         }

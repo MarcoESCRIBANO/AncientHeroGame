@@ -1,0 +1,122 @@
+{
+    "name": "PlayerControlAndroid",
+    "maps": [
+        {
+            "name": "UI",
+            "id": "9f69e558-3a7f-47cb-97d7-35a930d4cc54",
+            "actions": [
+                {
+                    "name": "Menu",
+                    "type": "PassThrough",
+                    "id": "a27dd077-dc0b-4831-8d93-b4e6d0a458d0",
+                    "expectedControlType": "Key",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AttackDeBase",
+                    "type": "PassThrough",
+                    "id": "0f27dfaa-aa6f-4094-8d57-5c501daeaf87",
+                    "expectedControlType": "Key",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Shield",
+                    "type": "PassThrough",
+                    "id": "e1e8b378-f1e1-48ea-9244-b06fe442ece9",
+                    "expectedControlType": "Key",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AttackUltime",
+                    "type": "PassThrough",
+                    "id": "0633c0ee-791c-4a50-ab2d-7ec0f5310933",
+                    "expectedControlType": "Key",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b2b26c41-71df-451e-beaa-6f903ffddac4",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "70d381c6-3fd9-4955-8127-e6b54022e62e",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AttackDeBase",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3694bb40-1819-41da-897c-acb0df1d7f4f",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shield",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "451faf33-5f5a-49cc-b799-cb91a2c4ab3e",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AttackUltime",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Player",
+            "id": "40c14728-4177-4dca-a1bb-78ff584bdb66",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "86781373-0366-43f7-94ae-7163e48ef2c9",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1d811d79-6c9f-4ac0-a8e1-399ab1f877b8",
+                    "path": "<AndroidJoystick>/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

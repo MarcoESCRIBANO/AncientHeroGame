@@ -17,8 +17,8 @@ public class PlayerRotation : MonoBehaviour
 
     private void rotation()
     {
-        h = Input.GetAxis("Horizontal");
-        v = Input.GetAxis("Vertical");
+        //h = Input.GetAxis("Horizontal");
+        //v = Input.GetAxis("Vertical");
         yaun = parent.transform.eulerAngles.y;
         float varYaun = 0;
         float varYaunX = 0;
